@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation – Hôpital HJ</title>
+
+  <!-- Feuille de style commune à toute l'équipe -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Styles propres à cette page (évite les conflits Git dans style.css) -->
+  <style>
+    /* Identité visuelle officielle – Hôpital HJ */
+    :root {
+      --hj-turquoise: #087E8B;   /* couleur principale */
+      --hj-bleu: #123B56;        /* couleur secondaire */
+      --hj-gris: #F2F6F8;        /* arrière-plan */
+      --hj-vert: #25A56A;        /* succès et accents */
+    }
+
+    body { background: var(--hj-gris); margin: 0; }
+
+    .pres {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--hj-bleu);
+      line-height: 1.6;
+    }
+
+    .pres nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      padding-bottom: 16px;
+      border-bottom: 3px solid var(--hj-turquoise);
+      margin-bottom: 32px;
+    }
+    .pres nav a { color: var(--hj-bleu); text-decoration: none; font-weight: 600; }
+    .pres nav a:hover { color: var(--hj-turquoise); text-decoration: underline; }
+    .pres nav a[aria-current="page"] { color: var(--hj-turquoise); text-decoration: underline; }
+
+    .pres h1 { font-size: 2.2rem; line-height: 1.2; margin: 0 0 12px; color: var(--hj-bleu); }
+    .pres h2 { font-size: 1.5rem; margin: 40px 0 12px; color: var(--hj-turquoise); }
+    .pres p  { max-width: 70ch; margin: 0 0 12px; }
+
+    .pres .intro { font-size: 1.1rem; }
+
+    .pres .chiffres {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .pres .chiffres li {
+      background: #fff;
+      border-left: 5px solid var(--hj-turquoise);
+      border-radius: 6px;
+      padding: 14px 16px;
+    }
+    .pres .chiffres strong { display: block; font-size: 1.8rem; color: var(--hj-turquoise); }
+
+    .pres .valeurs { padding-left: 20px; }
+    .pres .valeurs li { margin-bottom: 8px; }
+    .pres .valeurs li::marker { color: var(--hj-vert); }
+
+    .pres .historique { border-left: 3px solid var(--hj-vert); padding-left: 20px; margin: 0; list-style: none; }
+    .pres .historique li { margin-bottom: 14px; }
+    .pres .historique strong { color: var(--hj-turquoise); }
+
+    .pres .appel {
+      margin-top: 40px;
+      padding: 20px;
+      border-radius: 6px;
+      background: var(--hj-turquoise);
+      color: #fff;
+    }
+    .pres .appel a { color: #fff; font-weight: 600; }
+
+    .pres footer { margin-top: 40px; font-size: 0.9rem; }
+
+    .pres a:focus-visible { outline: 3px solid var(--hj-vert); outline-offset: 2px; }
+  </style>
+</head>
+
+<body>
+  <div class="pres">
+
+    <!-- Navigation (à harmoniser avec celle des autres pages) -->
+    <nav aria-label="Navigation principale">
+      <a href="../index.html">Accueil</a>
+      <a href="presentation.html" aria-current="page">Présentation</a>
+      <a href="services.html">Services</a>
+      <a href="specialistes.html">Spécialistes</a>
+      <a href="horaires.html">Horaires</a>
+      <a href="acces.html">Accès</a>
+    </nav>
+
+    <header>
+      <h1>Hôpital HJ : des soins de qualité, au service de chaque patient</h1>
+      <p class="intro">
+        L’hôpital HJ accueille, soigne et accompagne les patients et leurs familles
+        avec une équipe médicale qualifiée et des équipements modernes.
+      </p>
+    </header>
+
+    <main>
+      <!-- Chiffres clés (remplacer par les vrais chiffres du projet) -->
+      <ul class="chiffres" aria-label="Chiffres clés">
+        <li><strong>200</strong> lits d’hospitalisation</li>
+        <li><strong>10</strong> médecins spécialistes</li>
+        <li><strong>24 h/24</strong> service d’urgences</li>
+        <li><strong>8</strong> services médicaux</li>
+      </ul>
+
+      <section id="qui-sommes-nous">
+        <h2>Qui sommes-nous ?</h2>
+        <p>
+          L’hôpital HJ est un établissement de santé qui prend en charge les
+          consultations, les hospitalisations, les urgences et le suivi des patients.
+          Notre objectif est de rendre les soins accessibles, rapides et sûrs.
+        </p>
+      </section>
+
+      <section id="mission">
+        <h2>Notre mission</h2>
+        <p>
+          Offrir à chaque patient une prise en charge complète, de l’accueil jusqu’au
+          suivi après la sortie, dans le respect de sa dignité et de sa confidentialité.
+        </p>
+      </section>
+
+      <section id="valeurs">
+        <h2>Nos valeurs</h2>
+        <ul class="valeurs">
+          <li><strong>Respect :</strong> chaque patient est écouté et traité avec dignité.</li>
+          <li><strong>Compétence :</strong> une équipe formée en continu.</li>
+          <li><strong>Sécurité :</strong> des protocoles stricts d’hygiène et de soins.</li>
+          <li><strong>Disponibilité :</strong> une équipe présente jour et nuit.</li>
+        </ul>
+      </section>
+
+      <section id="historique">
+        <h2>Notre histoire</h2>
+        <ul class="historique">
+          <li><strong>Création :</strong> ouverture de l’hôpital avec quelques services de base.</li>
+          <li><strong>Développement :</strong> ajout de nouveaux services et de spécialistes.</li>
+          <li><strong>Aujourd’hui :</strong> un établissement complet, avec une gestion informatisée.</li>
+        </ul>
+      </section>
+
+      <section class="appel">
+        <p>
+          Besoin d’une consultation ?
+          Découvrez nos <a href="services.html">services</a>,
+          nos <a href="specialistes.html">spécialistes</a>
+          et nos <a href="horaires.html">horaires</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Hôpital HJ – Projet de TP Web</p>
+    </footer>
+
+  </div>
+</body>
+</html>
